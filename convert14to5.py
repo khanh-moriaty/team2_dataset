@@ -27,5 +27,5 @@ for fi in dir:
     for obj in ann_obj:
         name = obj.findall('name')[0]
         name.text = str(new_class[name.text])
-        if name.text = "-1": ann_root.remove(obj)
+        if name.text == "-1": ann_root.remove(obj)
     ann_tree.write(os.path.join(args.out_dir, fi))
