@@ -12,3 +12,5 @@ xe_buyt
 xe_tai
 xe_container
 xe_cuu_hoa
+xe_xich_lo
+xe_bus
