@@ -18,7 +18,7 @@ with open('classes_0-13.txt', 'r') as f:
         labels_str = f.read().splitlines()
 labels_ids = [0, 1, 1, -1, -1, 2, 2, 2, 3, 3, 3, 4, 4, 4,
               # Prepare for the unexpected :)
-             -1, 3]
+             -1, 2, 3, 3, 4]
 new_class = dict(zip(labels_str, labels_ids))
 
 os.makedirs(args.out_dir, exist_ok=True)
