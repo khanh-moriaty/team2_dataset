@@ -21,6 +21,7 @@ new_class = dict(zip(labels_str, labels_ids))
 
 os.makedirs(args.out_dir, exist_ok=True)
 
+cnt = 0
 for fi in dir:
     ann_path = os.path.join(ann_dir, fi)
     ann_tree = ET.parse(ann_path)
@@ -31,3 +32,6 @@ for fi in dir:
         name.text = str(new_class[name.text])
         if name.text == "-1": ann_root.remove(obj)
     ann_tree.write(os.path.join(args.out_dir, fi))
+    cnt += 1
+    
+print(cnt)
