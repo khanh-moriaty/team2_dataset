@@ -39,6 +39,7 @@ def convertXmlTxt(ann_dir, out_dir):
         
         for obj in obj_list:
             name = new_class[obj.find('name').text]
+            if name == '-1': continue
             bbox = obj.find('bndbox')
             xmin = int(bbox.find('xmin').text)
             xmax = int(bbox.find('xmax').text)
