@@ -2,7 +2,7 @@ import os
 import argparse
 import xml.etree.ElementTree as ET
 
-parser = argparse.ArgumentParser(description='This script support converting voc format with 14 classes to 5 classes')
+parser = argparse.ArgumentParser(description='This script support converting voc format with 14 classes to yolo txt format with 5 classes')
 parser.add_argument('--ann_dir', type=str, default=None,
                     help='path to annotation files directory.')
 parser.add_argument('--out_dir', type=str, default=None,
