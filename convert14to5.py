@@ -35,10 +35,10 @@ for fi in dir:
     for obj in ann_obj:
         name = obj.findall('name')[0]
         bbox = obj.findall('bndbox')[0]
-        xmin = int(bbox.findall('xmin')[0])
-        xmax = int(bbox.findall('xmax')[0])
-        ymin = int(bbox.findall('ymin')[0])
-        ymax = int(bbox.findall('ymax')[0])
+        xmin = int(bbox.findall('xmin')[0].text)
+        xmax = int(bbox.findall('xmax')[0].text)
+        ymin = int(bbox.findall('ymin')[0].text)
+        ymax = int(bbox.findall('ymax')[0].text)
         if xmax-xmin < THRESHOLD:
             ann_root.remove(obj)
             continue
