@@ -12,6 +12,7 @@ args = parser.parse_args()
 ann_dir = args.ann_dir
 dir = os.listdir(ann_dir)
 dir.sort()
+print(len(dir))
 
 with open('classes_0-13.txt', 'r') as f:
         labels_str = f.read().splitlines()
