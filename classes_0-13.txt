@@ -13,4 +13,7 @@ xe_tai
 xe_container
 xe_cuu_hoa
 xe_xich_lo
+ban_tai
+xe_cuu_thong
 xe_bus
+xe_Tai
