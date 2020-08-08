@@ -12,7 +12,7 @@ args = parser.parse_args()
 ann_dir = args.ann_dir
 dir = os.listdir(ann_dir)
 dir.sort()
-print(ann_dir, len(dir), end='')
+print(ann_dir, len(dir))
 
 with open('classes_0-13.txt', 'r') as f:
         labels_str = f.read().splitlines()
@@ -36,4 +36,4 @@ for fi in dir:
     ann_tree.write(os.path.join(args.out_dir, fi))
     cnt += 1
     
-print(cnt)
+print(cnt, end='')
