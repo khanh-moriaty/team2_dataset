@@ -45,8 +45,8 @@ def convertXmlTxt(ann_dir, out_dir):
             xmax = int(bbox.find('xmax').text)
             ymin = int(bbox.find('ymin').text)
             ymax = int(bbox.find('ymax').text)
-            x = xmin / width
-            y = ymin / height
+            x = (xmax + xmin) / width / 2
+            y = (xmax + ymin) / height / 2
             w = (xmax - xmin + 1) / width
             h = (ymax - ymin + 1) / height
             line = [name, x, y, w, h]
